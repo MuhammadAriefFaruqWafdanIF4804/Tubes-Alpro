@@ -125,8 +125,28 @@ func hapusAset(kripto *arrKripto, jumlahAset *int) {
  	//Gk ngerti juga, jadinya pake AI
 }
 
-func beli() {
+func beli(kripto arrKripto, jumlahAset int) {
+	var nama string
+	var jumlah, totalHarga float64
 	
+	fmt.Print("Masukkan nama aset yang ingin dibeli")
+	fmt.Scan(&nama)
+	fmt.Print("Masukkan nama aset yang ingin dibeli")
+	fmt.Scan(&jumlah)
+	
+	for i := 0; i < *jumlahAset; i++ {
+		if kripto[i].namaAset == nama {
+			totalHarga = jumlah * kripto[i].harga
+			if saldo >= totalHarga {
+				saldo -= totalHarga
+				fmt.Printf("Berhasil membeli %.2f unit %s dengan total harga %.2f", jumlah, nama, totalHarga)
+			} else {
+				fmt.Print("Saldo tidak mencukupi")
+			}
+		} else {
+			fmt.Print("Aset tidak ditemukan")
+		}
+	}
 }
 
 func jual() {

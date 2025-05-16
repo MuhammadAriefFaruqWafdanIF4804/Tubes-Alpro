@@ -81,7 +81,7 @@ func ubahAset(kripto *arrKripto, jumlahAset int) {
 	fmt.Scan(&nama)
 
 	for i := 0; i < jumlahAset; i++ {
-		if arrKripto[i].namaPasar == nama {
+		if kripto[i].namaPasar == nama {
 			var namaBaru string
 			var hargaBaru int
 			var nilaiBaru float64
@@ -93,9 +93,9 @@ func ubahAset(kripto *arrKripto, jumlahAset int) {
 			fmt.Println("Masukkan nilai pasar baru:")
 			fmt.Scanln(&nilaiBaru)
 
-			arrKripto[i].namaAset = namaBaru
-			arrKripto[i].harga = hargaBaru
-			arrKripto[i].nilaiAset = nilaiBaru
+			kripto[i].namaAset = namaBaru
+			kripto[i].harga = hargaBaru
+			kripto[i].nilaiAset = nilaiBaru
 
 			fmt.Println("Aset berhasil diubah.")
 			

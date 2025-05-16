@@ -21,7 +21,7 @@ func main() {
 	fmt.Scan(&option)
  
 	for option != 0 {
-		fmt.Println("===== Menu =====")
+	fmt.Println("===== Menu =====")
         fmt.Println("1. Kelola Aset Kripto")
         fmt.Println("2. Beli Aset")
         fmt.Println("3. Jual Aset")
@@ -63,7 +63,7 @@ func tambahAset(kripto *arrKripto, jumlahAset *int) {
 			find = true
 		}
 	}
-	if !find {
+	if !find { //Gk ngerti pake AI aja deh
 		(*kripto)[*jumlahAset].namaAset = nama
 		(*kripto)[*jumlahAset].harga = harga
 		(*kripto)[*jumlahAset].nilaiAset = nilai
@@ -105,11 +105,11 @@ func ubahAset(kripto *arrKripto, jumlahAset int) {
 }
 
 func hapusAset(kripto *arrKripto, jumlahAset *int) {
-
+	
 	var nama string
 	fmt.Println("Masukkan nama aset yang ingin dihapus:")
 	fmt.Scanln(&nama)
-
+	
 	for i := 0; i < jumlahAset; i++ {
 		if kripto[i].namaAset == nama {
 			// Geser elemen setelahnya ke kiri
@@ -122,6 +122,7 @@ func hapusAset(kripto *arrKripto, jumlahAset *int) {
 		}
 	}
 	fmt.Println("Aset tidak ditemukan.")
+ 	//Gk ngerti juga, jadinya pake AI
 }
 
 func beli() {

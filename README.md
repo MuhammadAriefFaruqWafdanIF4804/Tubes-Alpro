@@ -131,7 +131,7 @@ func beli(kripto arrKripto, jumlahAset int) {
 	
 	fmt.Print("Masukkan nama aset yang ingin dibeli")
 	fmt.Scan(&nama)
-	fmt.Print("Masukkan nama aset yang ingin dibeli")
+	fmt.Print("Masukkan jumlah aset yang ingin dibeli")
 	fmt.Scan(&jumlah)
 	
 	for i := 0; i < *jumlahAset; i++ {
